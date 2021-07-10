@@ -1,0 +1,19 @@
+{
+	"name": "edmweb",
+	"version": "1.0.0",
+	"description": "Static website for odontholoical center",
+	"main": "index.js",
+	"dependencies": {
+		"bootstrap": "^5.0.1",
+		"node-sass": "^6.0.1",
+		"nodemon": "^2.0.9"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"build-css": "node-sass --include-path scss SASS/estilo.scss CSS/main.css",
+		"watch-css": "nodemon -e scss -x \"npm run build-css\"",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC"
+}

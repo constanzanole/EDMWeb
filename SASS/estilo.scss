@@ -1,0 +1,116 @@
+@import 'paleta';
+
+nav {
+	background-color: $grisOscuro;
+}
+
+body {
+	background-color: $grisClaro;
+}
+
+footer {
+	background-color: $grisOscuro;
+	width: 100%;
+}
+
+ul {
+	li {
+		list-style-type: none;
+	}
+}
+
+@mixin parrafo($colorLetra, $tamanio, $interlineado, $alineado) {
+	color: $colorLetra;
+	font-size: $tamanio;
+	padding: 8px;
+	line-height: $interlineado;
+	text-align: $alineado;
+	font-family: 'Roboto', sans-serif;
+}
+
+@mixin titulos($colorLetra, $tamanio, $interlineado, $alineado) {
+	color: $colorLetra;
+	font-size: $tamanio;
+	padding: 8px;
+	line-height: $interlineado;
+	text-align: $alineado;
+	font-family: 'Roboto Mono', monospace;
+}
+
+@media only screen and (max-width: 600px) {
+	.cajaA {
+		&__h2 {
+			@include titulos($grisOscuro, 24px, 30px, left);
+		}
+
+		&__h3 {
+			@include titulos(black, 22px, 28px, left);
+		}
+
+		&__p {
+			@include parrafo($azul, 16px, 26px, left);
+		}
+	}
+
+	.icon {
+		width: 40px;
+		padding: 8px;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.caja {
+		display: flex;
+		align-items: center;
+
+		.cajaA {
+			&__h2 {
+				@include titulos($grisOscuro, 26px, 26px, left);
+			}
+
+			&__h3 {
+				@include titulos(black, 26px, 28px, left);
+			}
+
+			&__p {
+				@include parrafo($azul, 16px, 26px, left);
+			}
+		}
+	}
+
+	.icon {
+		width: 50px;
+		padding: 8px;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.caja {
+		display: flex;
+		align-items: center;
+
+		.cajaA {
+			&__h2 {
+				@include titulos($grisOscuro, 26px, 28px, left);
+			}
+
+			&__h3 {
+				@include titulos(black, 26px, 32px, left);
+			}
+
+			&__p {
+				@include parrafo($azul, 18px, 36px, left);
+			}
+		}
+	}
+
+	.icon {
+		width: 50px;
+		padding: 8px;
+	}
+}
+
+.formu {
+	@extend .cajaA__p;
+	background-color: $salmon;
+}
