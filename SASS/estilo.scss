@@ -19,6 +19,11 @@ ul {
 	}
 }
 
+.carousel{
+	margin-top: 1rem;
+}
+
+
 @mixin parrafo($colorLetra, $tamanio, $interlineado, $alineado) {
 	color: $colorLetra;
 	font-size: $tamanio;
@@ -62,6 +67,7 @@ ul {
 	.caja {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 
 		.cajaA {
 			&__h2 {
@@ -88,8 +94,11 @@ ul {
 	.caja {
 		display: flex;
 		align-items: center;
+		
 
 		.cajaA {
+			justify-content: center;
+			
 			&__h2 {
 				@include titulos($grisOscuro, 26px, 28px, left);
 			}
