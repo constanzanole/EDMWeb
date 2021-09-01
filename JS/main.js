@@ -24,3 +24,9 @@ nombreConsulta();
 let tit = document.createElement('h1');
 tit.innerText = 'Gracias por visitar EDM';
 miFormulario.appendChild(tit);
+
+// //Pedir nombre  del usuario por prompt,
+// //guardarlos en el sessionStorage
+let persona = prompt('Ingrese su nombre');
+sessionStorage.setItem('nombre', persona);
+console.log('Los datos guardados: ' + sessionStorage.getItem('nombre'));
